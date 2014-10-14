@@ -1,0 +1,12 @@
+:i18n:
+  Reset.java:
+    - signup.valid.email
+    - error.technical
+    - mail.reset.fail.subject
+    - mail.reset.fail.message
+    - error.technical
+    - error.expiredresetlink
+    - signup.valid.password
+    - resetpassword.success
+    - mail.reset.confirm.subject
+    - mail.reset.confirm.message

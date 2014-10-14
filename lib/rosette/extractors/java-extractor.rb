@@ -33,9 +33,9 @@ module Rosette
         end
       end
 
-      def valid_args?(node)
-        if node.argumentList.children.size >= 1
-          if literal = find_literal(node.argumentList.children.first)
+      def valid_args?(fn_call)
+        if fn_call.getArgumentList.children.size >= 1
+          if literal = find_literal(fn_call.getArgumentList)
             text = literal.getText
             text[0] == '"' && text[-1] == '"'
           else
@@ -46,8 +46,8 @@ module Rosette
         end
       end
 
-      def get_key(node)
-        find_literal(node.argumentList.children.first).getText[1..-2]
+      def get_key(fn_call)
+        find_literal(fn_call.getArgumentList).getText[1..-2]
       end
 
       private
@@ -70,10 +70,10 @@ module Rosette
       class I18nExtractor < JavaExtractor
         protected
 
-        def valid_name?(node)
-          node.typeName &&
-            node.typeName.getText == 'I18n' &&
-            node.Identifier.getText == 't'
+        def valid_name?(fn_call)
+          fn_call.getTypeName &&
+            fn_call.getTypeName.getText == 'I18n' &&
+            fn_call.getName == 't'
         end
       end
     end
