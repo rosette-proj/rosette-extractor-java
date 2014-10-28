@@ -1,12 +1,20 @@
 :i18n:
   Reset.java:
-    - signup.valid.email
-    - error.technical
-    - mail.reset.fail.subject
-    - mail.reset.fail.message
-    - error.technical
-    - error.expiredresetlink
-    - signup.valid.password
-    - resetpassword.success
-    - mail.reset.confirm.subject
-    - mail.reset.confirm.message
+    - key: signup.valid.email
+      line_number: 63
+    - key: error.technical
+      line_number: 89
+    - key: mail.reset.fail.subject
+      line_number: 100
+    - key: mail.reset.fail.message
+      line_number: 101
+    - key: error.expiredresetlink
+      line_number: 122
+    - key: signup.valid.password
+      line_number: 138
+    - key: resetpassword.success
+      line_number: 166
+    - key: mail.reset.confirm.subject
+      line_number: 183
+    - key: mail.reset.confirm.message
+      line_number: 184

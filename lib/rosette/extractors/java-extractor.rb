@@ -15,6 +15,10 @@ module Rosette
   module Extractors
 
     class JavaExtractor < Rosette::Core::Extractor
+      def supports_line_numbers?
+        true
+      end
+
       protected
 
       def each_function_call(java_code)
@@ -22,7 +26,15 @@ module Rosette
           root = parse_java(java_code)
 
           visitor = FunctionCallVisitor.new(
-            lambda { |node| yield node }.to_java(
+            lambda do |node|
+              line_number = if node.getArgumentList && node.getArgumentList.children.size >= 1
+                node.getArgumentList.children.first.getStart.getLine
+              else
+                -1
+              end
+
+              yield node, line_number
+            end.to_java(
               FunctionCallVisitor::FunctionCallNotifier
             )
           )
