@@ -29,9 +29,6 @@ import static play.data.Form.form;
  * User: yesnault
  * Date: 20/01/12
  */
-
-public class Foo { public void method() { I18n.t('foo.bar'); } }
-
 public class Reset extends Controller {
 
     public static class AskForm {
