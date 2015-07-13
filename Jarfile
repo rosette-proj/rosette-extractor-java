@@ -1,1 +1,1 @@
-jar 'org.antlr:antlr4', '= 4.2'
+jar 'org.antlr:antlr4-runtime', '4.2'
