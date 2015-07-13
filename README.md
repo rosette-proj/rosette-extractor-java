@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rosette-proj/rosette-extractor-java.svg)](https://travis-ci.org/rosette-proj/rosette-extractor-java) [![Code Climate](https://codeclimate.com/github/rosette-proj/rosette-extractor-java/badges/gpa.svg)](https://codeclimate.com/github/rosette-proj/rosette-extractor-java) [![Test Coverage](https://codeclimate.com/github/rosette-proj/rosette-extractor-java/badges/coverage.svg)](https://codeclimate.com/github/rosette-proj/rosette-extractor-java/coverage)
+
 rosette-extractor-java
 ====================
 
